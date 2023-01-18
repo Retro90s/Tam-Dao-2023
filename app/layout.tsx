@@ -4,7 +4,7 @@ export default async function RootLayout({children}: {children: React.ReactNode;
   return (
     <html lang="en">
       <head />
-      <body>
+      <body className="antialiased bg-slate-900">
         {children}
       </body>
     </html>
