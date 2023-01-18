@@ -1,29 +1,19 @@
 import { promises as fs } from "fs";
 import path from "path";
-import styles from "./page.module.css";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import { Gallery } from "./components/Gallery";
 
-const { container, main, title } = styles;
-
 const Home = async () => {
-  const imageDirectory = path.join(process.cwd(), "/public/images");
+  const imageDirectory = path.join(process.cwd(), "/public/pictures");
   const imageFilenames = await fs.readdir(imageDirectory);
 
   return (
-    <div className={container}>
-      <div className={main}>
-        <Title Title={"Kỷ niệm Tam Đảo 2023"} />
-        <Gallery images={imageFilenames} />
-      </div>
+    <div className="flex flex-col container items-center justify-center mx-auto px-2 py-4">
+      <Header Title={"Tam Đảo 2023"} />
+      <Gallery images={imageFilenames} />
+      <Footer />
     </div>
-  );
-};
-
-const Title = ({ Title }: { Title: String }) => {
-  return (
-    <h1 className={title}>
-      {Title}
-    </h1>
   );
 };
 
