@@ -9,7 +9,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<FileNames>
 ) {
-  const imageDirectory = path.join(process.cwd(), "/public/images");
+  const imageDirectory = path.join(process.cwd(), "/public/pictures");
   const imageFilenames = await fs.readdir(imageDirectory);
   res.status(200).json(imageFilenames);
 }

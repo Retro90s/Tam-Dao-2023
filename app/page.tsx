@@ -6,7 +6,7 @@ import { Gallery } from "./components/Gallery";
 const { container, main, title } = styles;
 
 const Home = async () => {
-  const imageDirectory = path.join(process.cwd(), "/public/images");
+  const imageDirectory = path.join(process.cwd(), "/public/pictures");
   const imageFilenames = await fs.readdir(imageDirectory);
 
   return (

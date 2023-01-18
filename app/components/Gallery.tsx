@@ -13,7 +13,7 @@ export const Gallery = ({ images }: { images: Array<string> }) => {
           width={150}
           height={150}
           alt={"alt"}
-          src={`/images/${el}`}
+          src={`/pictures/${el}`}
           key={el}
         />
       ))}
