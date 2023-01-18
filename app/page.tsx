@@ -8,7 +8,7 @@ const Home = async () => {
   const imageFilenames = await fs.readdir(imageDirectory);
 
   return (
-    <div className="flex flex-col container mx-auto px-2 py-4 items-center justify-center">
+    <div className="flex flex-col container items-center justify-center mx-auto px-2 py-4">
       <Header Title={"Tam Đảo 2023"} />
       <Gallery images={imageFilenames} />
     </div>
