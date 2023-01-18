@@ -4,7 +4,7 @@ export const Footer = () => {
       built with 💖 by{" "}
       <a
         href="https://torn4dom4n.github.io"
-        className="font-semibold underline decoration-wavy"
+        className="font-semibold underline decoration-solid"
       >
         Long Nhat Nguyen
       </a>
