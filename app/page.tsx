@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { Header } from "./components/Header";
 import { Gallery } from "./components/Gallery";
 
 const Home = async () => {
@@ -7,18 +8,10 @@ const Home = async () => {
   const imageFilenames = await fs.readdir(imageDirectory);
 
   return (
-    <div className="container mx-auto flex flex-col px-5 pt-36 py-0 items-center justify-center">
-        <Title Title={"Kỷ niệm Tam Đảo 2023"} />
-        <Gallery images={imageFilenames} />
+    <div className="flex flex-col container mx-auto px-1 py-6 items-center justify-center">
+      <Header Title={"Tam Đảo 2023"} />
+      <Gallery images={imageFilenames} />
     </div>
-  );
-};
-
-const Title = ({ Title }: { Title: String }) => {
-  return (
-    <h1 className="text-white text-4xl font-bold my-2 mb-1">
-      {Title}
-    </h1>
   );
 };
 
