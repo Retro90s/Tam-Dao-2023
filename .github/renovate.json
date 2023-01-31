@@ -1,0 +1,7 @@
+{
+  "extends": ["config:base"],
+  "dependencyDashboard": false,
+  "labels": ["renovate"],
+  "automerge": false,
+  "rangeStrategy": "bump"
+}
