@@ -24,14 +24,14 @@ export default function Head() {
       />
       <link rel="icon" href="favicon.ico" />
 
-      <title>Tam Đảo 2023 | Retro90s</title>
-      <meta name="title" content="Tam Đảo 2023 | Retro90s" />
+      <title>Tam Đảo 2023 | Microlens</title>
+      <meta name="title" content="Tam Đảo 2023 | Microlens" />
       <meta name="description" content="Kỷ niệm chuyến đi Tam Đảo 2023" />
       <meta name="author" content="Long Nhat Nguyen" />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://tamdao2023.netlify.app" />
-      <meta property="og:title" content="Tam Đảo 2023 | Retro90s" />
+      <meta property="og:title" content="Tam Đảo 2023 | Microlens" />
       <meta
         property="og:description"
         content="Kỷ niệm chuyến đi Tam Đảo 2023"
@@ -42,7 +42,7 @@ export default function Head() {
       />
 
       <meta name="twitter:url" content="https://tamdao2023.netlify.app" />
-      <meta name="twitter:title" content="Tam Đảo 2023 | Retro90s" />
+      <meta name="twitter:title" content="Tam Đảo 2023 | Microlens" />
       <meta
         name="twitter:description"
         content="Kỷ niệm chuyến đi Tam Đảo 2023"

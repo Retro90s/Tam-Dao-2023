@@ -1,8 +1,8 @@
 {
-  "name": "@retro90s/nextjs-basic-image-gallery",
+  "name": "@microlens/nextjs-basic-image-gallery",
   "description": "Basic image gallery site with masonry grid",
-  "author": "Retro90s",
-  "version": "1.0.1",
+  "author": "Long Nhat Nguyen",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

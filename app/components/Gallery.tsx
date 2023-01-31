@@ -6,7 +6,7 @@ export const Gallery = ({ images }: { images: Array<string> }) => {
     <div className="columns md:columns-2 lg:columns-3">
       {images.map((id: string) => (
           <Image
-            className="w-full rounded-md mb-4"
+            className="w-full mb-4 shadow-xl"
             width={1080}
             height={1080}
             alt={"Alt Text"}
