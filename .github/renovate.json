@@ -4,6 +4,6 @@
   "labels": ["renovate"],
   "automerge": true,
   "schedule": [
-    "every weekday"
+    "before 3am on Monday"
   ]
 }
