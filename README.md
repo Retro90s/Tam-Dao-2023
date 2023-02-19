@@ -11,6 +11,6 @@ This application requires Node.js v18+.
 ```sh
 git clone https://github.com/Retro90s/tamdao2023
 cd tamdao2023
-npm run install
-npm dev
+pnpm install
+pnpm dev
 ```

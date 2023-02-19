@@ -1,8 +1,8 @@
 {
-  "name": "@microlens/nextjs-basic-image-gallery",
-  "description": "Basic image gallery site with masonry grid built with Next.js and TailwindCSS",
+  "name": "@microlens/nextjs-image-gallery",
+  "description": "Image gallery site with masonry grid built with Next.js and TailwindCSS",
   "author": "Long Nhat Nguyen",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
