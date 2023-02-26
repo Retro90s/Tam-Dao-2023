@@ -4,13 +4,13 @@ import Image from "next/image";
 export const Gallery = ({ images }: { images: Array<string> }) => {
   return (
     <>
-      {images.map((image) => (
+      {images.map((id: string) => (
         <Image
-          key={image.id}
+          key={id}
           alt="Kỷ niệm Tam Đảo 2023"
           className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110 mb-5"
           style={{ transform: "translate3d(0, 0, 0)" }}
-          src={`/pictures/${image}`}
+          src={`/pictures/${id}`}
           width={720}
           height={480}
           sizes="(max-width: 640px) 100vw,
