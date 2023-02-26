@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 
 export const Gallery = ({ images }: { images: Array<string> }) => {
   return (
@@ -17,6 +18,7 @@ export const Gallery = ({ images }: { images: Array<string> }) => {
                   (max-width: 1280px) 50vw,
                   (max-width: 1536px) 33vw,
                   25vw"
+          priority
         />
       ))}
     </>
