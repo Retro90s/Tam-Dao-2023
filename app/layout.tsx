@@ -2,9 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Tam Đảo 2023 | Microlens",
-  },
+  title: "Tam Đảo 2023 | Microlens",
   description: "Kỷ niệm chuyến đi Tam Đảo 2023",
   openGraph: {
     title: "Tam Đảo 2023 | Microlens",
