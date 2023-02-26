@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { getPlaiceholder } from "plaiceholder";
 
 export const Gallery = ({ images }: { images: Array<string> }) => {
   return (
