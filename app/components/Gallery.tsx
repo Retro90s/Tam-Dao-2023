@@ -31,14 +31,16 @@ export const Gallery = ({ images }: { images: Array<string> }) => {
           style={{ transform: "translate3d(0, 0, 0)" }}
           src={`/pictures/${id}`}
           placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(720, 480))}`}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(720, 480)
+          )}`}
           width={720}
           height={480}
           sizes="(max-width: 640px) 100vw,
                   (max-width: 1280px) 50vw,
                   (max-width: 1536px) 33vw,
                   25vw"
-          priority
+          loading="eager"
         />
       ))}
     </>
