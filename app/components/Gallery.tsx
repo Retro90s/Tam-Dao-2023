@@ -13,6 +13,7 @@ export const Gallery = ({ images }: { images: Array<string> }) => {
           src={`/pictures/${id}`}
           width={720}
           height={480}
+          quality={60}
           sizes="(max-width: 640px) 100vw,
                   (max-width: 1280px) 50vw,
                   (max-width: 1536px) 33vw,
