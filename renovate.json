@@ -1,0 +1,23 @@
+{
+  "extends": ["config:base"],
+  "dependencyDashboard": false,
+  "labels": ["renovate"],
+  "automerge": true,
+  "schedule": ["before 3am on Monday"],
+  "packageRules": [
+    {
+      "groupName": "typescript",
+      "labels": ["typescript"],
+      "matchPackageNames": ["typescript"],
+      "matchPackagePatterns": ["^@types"],
+      "automerge": true
+    },
+    {
+      "groupName": "formatting & linting",
+      "labels": ["linting"],
+      "matchPackageNames": ["eslint", "prettier"],
+      "matchPackagePatterns": ["^eslint"],
+      "automerge": true
+    }
+  ]
+}
