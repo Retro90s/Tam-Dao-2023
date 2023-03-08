@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://tamdao2023.netlify.app/og.jpg",
+        width: 1920,
+        height: 1080,
       },
     ],
     locale: "vi-VN",
