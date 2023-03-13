@@ -1,6 +1,6 @@
 # Tam Dao 2023 (Kỷ niệm Tam Đảo 2023)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/916d702f-b09d-4a84-b153-be5e3026dfdc/deploy-status)](https://app.netlify.com/sites/tamdao2023/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dddf8f76-81f8-44b1-acc3-3e5c39fd6afd/deploy-status)](https://app.netlify.com/sites/tamdao2023/deploys)
 
 This site built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com) and [Netlify](https://www.netlify.com).
 
