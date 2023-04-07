@@ -1,10 +1,6 @@
 [build]
   command = "pnpm run build"
-
-[[plugins]]
-  # Next.js Runtime
-  # see detail: https://github.com/netlify/next-runtime
-  package = "@netlify/plugin-nextjs"
+  publish = "out"
 
 [[plugins]]
   # Netlify Plugin Lighthouse
