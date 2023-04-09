@@ -9,7 +9,7 @@ This site built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailw
 This application requires Node.js v18+.
 
 ```sh
-git clone https://github.com/Retro90s/tamdao2023
+git clone https://github.com/microlens/tamdao2023
 cd tamdao2023
 pnpm install
 pnpm dev
