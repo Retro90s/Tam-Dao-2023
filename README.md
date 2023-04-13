@@ -4,7 +4,7 @@
 
 This site built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com) and [Netlify](https://www.netlify.com).
 
-## Running Locally
+## Running locally
 
 This application requires Node.js v18+.
 
@@ -14,3 +14,4 @@ cd tamdao2023
 pnpm install
 pnpm dev
 ```
+> 😊 Memmories on [YouTube](https://www.youtube.com/playlist?list=PLms0b5Z8uXzAsFxoARxvt_gFcDFWuTUwR).
