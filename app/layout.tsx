@@ -1,55 +1,58 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import './globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Tam Đảo 2023 | Microlens",
-  description: "Kỷ niệm chuyến đi Tam Đảo 2023",
+  metadataBase: new URL('https://tamdao2023.netlify.app'),
+  title: 'Tam Đảo 2023 | Microlens',
+  description: 'Kỷ niệm chuyến đi Tam Đảo 2023',
   openGraph: {
-    title: "Tam Đảo 2023 | Microlens",
-    description: "Kỷ niệm chuyến đi Tam Đảo 2023",
-    url: "https://tamdao2023.netlify.app",
-    siteName: "Tam Đảo 2023 | Microlens",
+    title: 'Tam Đảo 2023 | Microlens',
+    description: 'Kỷ niệm chuyến đi Tam Đảo 2023',
+    url: 'https://tamdao2023.netlify.app',
+    siteName: 'Tam Đảo 2023 | Microlens',
     images: [
       {
-        url: "https://tamdao2023.netlify.app/og-image.jpg",
+        url: '/og-image.jpg',
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "vi-VN",
-    type: "website",
+    locale: 'vi-VN',
+    type: 'website',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Tam Đảo 2023",
-    description: "Kỷ niệm chuyến đi Tam Đảo 2023",
-    creator: "@torn4dom4n",
-    images: ["https://tamdao2023.netlify.app/og-image.jpg"],
+    card: 'summary_large_image',
+    title: 'Tam Đảo 2023',
+    description: 'Kỷ niệm chuyến đi Tam Đảo 2023',
+    creator: '@torn4dom4n',
+    images: ['/og-image.jpg'],
   },
   icons: {
-    shortcut: "/favicon.svg",
+    shortcut: '/favicon.svg',
   },
-};
+}
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body className="bg-black antialiased">{children}</body>
     </html>
-  );
+  )
 }

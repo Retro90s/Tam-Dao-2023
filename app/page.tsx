@@ -1,10 +1,10 @@
-import { promises as fs } from "fs";
-import path from "path";
-import Image from "next/image";
+import { promises as fs } from 'fs'
+import path from 'path'
+import Image from 'next/image'
 
 const Home = async () => {
-  const imageDirectory = path.join(process.cwd(), "/public/pictures");
-  const imageFilenames = await fs.readdir(imageDirectory);
+  const imageDirectory = path.join(process.cwd(), '/public/pictures')
+  const imageFilenames = await fs.readdir(imageDirectory)
 
   return (
     <>
@@ -29,7 +29,7 @@ const Home = async () => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        made with ❤️ by{" "}
+        made with ❤️ by{' '}
         <a
           href="https://torn4dom4n.github.io"
           target="_blank"
@@ -40,10 +40,10 @@ const Home = async () => {
         </a>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 const Gallery = ({ images }: { images: Array<string> }) => {
   return (
@@ -53,7 +53,7 @@ const Gallery = ({ images }: { images: Array<string> }) => {
           key={id}
           alt="Kỷ niệm Tam Đảo 2023"
           className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110 mb-5"
-          style={{ transform: "translate3d(0, 0, 0)" }}
+          style={{ transform: 'translate3d(0, 0, 0)' }}
           src={`/pictures/${id}`}
           width={720}
           height={480}
@@ -64,8 +64,8 @@ const Gallery = ({ images }: { images: Array<string> }) => {
         />
       ))}
     </>
-  );
-};
+  )
+}
 
 function Logo() {
   return (
@@ -104,5 +104,5 @@ function Logo() {
         d="M119.613205,151.346390 C113.131775,143.684219 112.046387,134.581039 116.432854,126.578522 C120.680321,118.829582 128.728760,114.935013 138.320343,115.987358 C146.189606,116.850739 153.184326,123.099716 155.483963,131.321106 C157.980316,140.245804 154.364410,149.439789 146.304352,154.661606 C137.773315,160.188538 128.843460,159.155807 119.613205,151.346390 z"
       />
     </svg>
-  );
+  )
 }
