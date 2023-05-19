@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "Tam Đảo 2023 | Microlens",
     images: [
       {
-        url: "https://tamdao2023.netlify.app/og.jpg",
+        url: "https://tamdao2023.netlify.app/og-image.jpg",
         width: 1920,
         height: 1080,
       },
@@ -31,8 +31,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Tam Đảo 2023 | Microlens",
     card: "summary_large_image",
+    title: "Tam Đảo 2023",
+    description: "Kỷ niệm chuyến đi Tam Đảo 2023",
+    creator: "@torn4dom4n",
+    images: ["https://tamdao2023.netlify.app/og-image.jpg"],
   },
   icons: {
     shortcut: "/favicon.svg",
