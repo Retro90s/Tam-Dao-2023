@@ -6,3 +6,8 @@
   # Next.js Runtime
   # see detail: https://github.com/netlify/next-runtime
   package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  # Netlify Plugin Lighthouse
+  # see detail: https://github.com/netlify/netlify-plugin-lighthouse
+  package = "@netlify/plugin-lighthouse"

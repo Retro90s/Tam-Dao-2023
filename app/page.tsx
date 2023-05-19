@@ -15,9 +15,9 @@ const Home = async () => {
               <span className="flex max-h-full max-w-full items-center justify-center">
                 <Logo />
               </span>
-              <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
+              <span className="absolute bottom-0 inset-x-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
-            <h1 className="mt-8 mb-4 font-bold uppercase tracking-widest">
+            <h1 className="mb-4 mt-8 font-bold uppercase tracking-widest">
               KỶ NIỆM TAM ĐẢO 2023
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
@@ -52,8 +52,7 @@ const Gallery = ({ images }: { images: Array<string> }) => {
         <Image
           key={id}
           alt="Kỷ niệm Tam Đảo 2023"
-          className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110 mb-5"
-          style={{ transform: 'translate3d(0, 0, 0)' }}
+          className="mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
           src={`/pictures/${id}`}
           width={720}
           height={480}
