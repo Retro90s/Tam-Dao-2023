@@ -14,7 +14,19 @@
   },
   "settings": {
     "tailwindcss": {
-      "config": "./tailwind.config.js"
+      "callees": ["classnames", "clsx", "ctl"],
+      "config": "./tailwind.config.js",
+      "cssFiles": [
+        "**/*.css",
+        "!**/node_modules",
+        "!**/.*",
+        "!**/dist",
+        "!**/build",
+      ],
+      "cssFilesRefreshRate": 5000,
+      "removeDuplicates": true,
+      "skipClassAttribute": false,
+      "classRegex": "^class(Name)?$"
     },
     "next": {
       "rootDir": ["./"]
