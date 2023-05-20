@@ -2,7 +2,7 @@
   "name": "@microlens/nextjs-image-gallery",
   "description": "Image gallery site with masonry grid built with Next.js",
   "author": "Long Nhat Nguyen",
-  "version": "23.5.19",
+  "version": "23.5.20",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format:write": "prettier --write \"**/*.{js,ts,tsx,mdx,yml}\" --cache"
+    "format:write": "prettier --write \"**/*.{js,ts,tsx,mdx,yml,json}\" --cache"
   },
   "dependencies": {
     "next": "^13.4.3",
