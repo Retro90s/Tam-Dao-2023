@@ -1,26 +1,7 @@
 import photos from './photos'
 import Image from 'next/image'
 
-const shimmer = (w: number, h: number) => `
-<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <linearGradient id="g">
-      <stop stop-color="#333" offset="20%" />
-      <stop stop-color="#222" offset="50%" />
-      <stop stop-color="#333" offset="70%" />
-    </linearGradient>
-  </defs>
-  <rect width="${w}" height="${h}" fill="#333" />
-  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-</svg>`
-
-const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
-
-const Home = async () => {
+export default function Home() {
   return (
     <>
       <main className="mx-auto max-w-[1960px] p-4">
@@ -81,9 +62,7 @@ const Home = async () => {
               className="mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
               src={`/photos/${src}`}
               placeholder="blur"
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                shimmer(height, width)
-              )}`}
+              blurDataURL={`data:image/webp;base64,UklGRjwGAABXRUJQVlA4WAoAAAAgAAAAPQIArgEASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggTgQAAJBIAJ0BKj4CrwE+7Xa3VqmnJSOgCAEwHYlpbuCLXoM/9n/02ZBs0cYIA8RZaTHoAGGEXJyHvtk5E2l2vFych77ZOXQO3ImsXs9dKny2zbaHpbc2yi+O5M//95qaAH2yc4kiCc4iLlHytHjb/UzNZUMyC0jwe+LCDMENF70YADeJZQbXWeLonQWh4uToxyWUqmRyWPoH5hmhxfnMVU2ka+6iBxJrJ32tukbajF2JNpbg0EDfsILtXdKx7VNg5wCOaKREd8OLm77IJJURheFXMhj56IgKBsnRjcnIfBofi84Jculz+B9qsGBhuSz6OKbMcl9d3PavEbk5D8HPzbnWQ/bXtFq/iN9kXCUzZCPKxb1BsXsd5SwD4LUIOjKwLmyOodRZbTsx3sD50HTTy7SV7YafbGerP4Iu8D1KZgZIYOHWh/2++kPIok2jqAph3yunuF+AGBNZrEvoZDa/OZbxDpqBojma/ojPl3x5g+xuEca9EVDRUk9IKsXmwFWTbYEfWPEM+m3l/X0RlTvonR8Say6Mfz8Lto0ri8kco09Irsqfr3SS7zi8Q6d7bAVZORZSN59PphsZq8Boj14R9xV1wor1Rvu4qKc6ZRp5yLJgLHdfBCkllO64t3XwQC3sz4h6756i8odS5ht18EKSWUj9EdZNvKcxdZHpM9b3kxxkOW07R+idHvPk9JRTpj7f29fOfHOqlYCPpt5hida1rYEKle+827L2uIAm1PTjXh83QB7XLO+4MhoP46uIxS1h5XAqr7ZRROQ+oUsG/Yo43IAA/tDfn/YrytqLmk8BtlDslZV0QfLzpAq1x4femzi2Mo5xMqiNia4snGhl0eSoum54j2bwvw2Pq2wzm6hKYjdZ44f1TkN4B85V30wKoXxlwyRNjlDkB4j41g9ySJri+7MT/Zoiv8yw4iMvGODsudj0pNMsFqj4pbVdUqR3qpnibroR4ebCLLzKSpTddCBJCRldaYmhS2Gtk1RZjYLN2B1kVjd1Rdh30oJo/1QPoOGNZ4caCeXDz4qemn26LxRCq59RJwXMegDE1Vigf/iQyxf8xw8WWFugsWc4S2bSCFxe7hjfLsOFIz0pIQqHjCOAFVsxZZFacW24+nvfqMMUkzxlypp7iX0GgFdoP92AbTnYiLTGL6CYB5HHDRvwlugACfFuR9HBoJ0vAAAQuHxP3HbbCy1LADUj7rgZF3FYqa5H18RAWMvdfh0HgI7X0LYAcMG2ogAmrua/L42GVXCegrkp9AevQCx7iSZ90PPIOPT+4YYUIXBVfxcQQlr2R2GA0k/4fZgPZmMb/w1d2fBbN75Bxgug5MsFfrMwkweCxs8CYFSOC4sAYBiXwoj8YYBwhXFdrL4W/mWYtgRckTFCXp7dsb9iNtusVGSDuT2aCAbWMSZA1XJufvSFScM1x+0r6hwMif3BWRanKO8cn0P2RvGI0HACa/LiEBNQoLoLW+gAAAA=`}
               height={height}
               width={width}
               priority={true}
@@ -109,5 +88,3 @@ const Home = async () => {
     </>
   )
 }
-
-export default Home

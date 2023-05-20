@@ -1,4 +1,10 @@
-const photos = [
+let photos: Array<{
+  src: string
+  width: number
+  height: number
+}>
+
+export default photos = [
   {
     src: '230114_165001.jpg',
     width: 2202,
@@ -555,5 +561,3 @@ const photos = [
     height: 923,
   },
 ]
-
-export default photos
