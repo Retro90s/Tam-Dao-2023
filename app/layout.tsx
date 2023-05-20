@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tam Đảo 2023',
+    title: 'Tam Đảo 2023 | Microlens',
     description: 'Kỷ niệm chuyến đi Tam Đảo 2023',
     creator: '@torn4dom4n',
     images: ['/og-image.jpg'],
