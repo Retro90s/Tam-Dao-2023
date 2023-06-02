@@ -6,17 +6,15 @@
   "schedule": ["before 3am on Monday"],
   "packageRules": [
     {
-      "groupName": "typescript",
-      "labels": ["typescript"],
-      "matchPackageNames": ["typescript"],
-      "matchPackagePatterns": ["^@types"],
+      "groupName": "Formatting & Linting",
+      "matchPackageNames": ["eslint", "prettier"],
+      "matchPackagePatterns": ["^eslint-", "^prettier-"],
       "automerge": true
     },
     {
-      "groupName": "formatting & linting",
-      "labels": ["linting"],
-      "matchPackageNames": ["eslint", "prettier"],
-      "matchPackagePatterns": ["^eslint"],
+      "groupName": "TypeScript",
+      "matchPackageNames": ["typescript"],
+      "matchPackagePatterns": ["^@types"],
       "automerge": true
     }
   ]
