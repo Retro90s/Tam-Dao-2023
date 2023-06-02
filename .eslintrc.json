@@ -14,8 +14,8 @@
   },
   "settings": {
     "tailwindcss": {
-      "callees": ["classnames", "clsx", "ctl"],
-      "config": "./tailwind.config.js",
+      "callees": ["classnames", "clsx", "ctl", "cva", "tv"],
+      "config": "./tailwind.config.{ts|js}",
       "cssFiles": [
         "**/*.css",
         "!**/node_modules",
