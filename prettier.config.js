@@ -1,9 +1,9 @@
 /** @type {import('prettier').Config} */
+
 module.exports = {
-  plugins: [require('prettier-plugin-tailwindcss')],
-  endOfLine: 'lf',
-  semi: false,
-  singleQuote: true,
+  trailingComma: "es5",
   tabWidth: 2,
-  trailingComma: 'es5',
-}
+  semi: true,
+  singleQuote: true,
+  plugins: ["prettier-plugin-tailwindcss"],
+};
