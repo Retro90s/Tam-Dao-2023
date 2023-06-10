@@ -2,7 +2,7 @@
   "name": "@microlens/nextjs-image-gallery",
   "description": "Image gallery site with masonry grid built with Next.js",
   "author": "Long Nhat Nguyen",
-  "version": "23.6.2",
+  "version": "23.6.10",
   "private": true,
   "scripts": {
     "dev": "next dev",
