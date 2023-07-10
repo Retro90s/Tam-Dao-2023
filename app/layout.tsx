@@ -1,5 +1,5 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import './global.css';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tamdao2023.netlify.app'),
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
   icons: {
     shortcut: '/favicon.svg',
   },
-}
+};
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-black antialiased">{children}</body>
+    <html lang='en'>
+      <body className='bg-black antialiased'>{children}</body>
     </html>
-  )
+  );
 }
