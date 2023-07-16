@@ -807,7 +807,7 @@ export default function Gallery() {
           />
         </AspectRatio>
       </DialogTrigger>
-      <DialogContent className='max-h-full w-full p-0'>
+      <DialogContent className='h-full p-0'>
         <Image
           key={src}
           alt='Tam Dao 2023'
