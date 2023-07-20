@@ -20,7 +20,7 @@ async function getImages(pattern: string) {
         height,
         base64,
       };
-    }),
+    })
   );
   images.sort((a, b) => {
     if (a.src < b.src) {
@@ -42,31 +42,31 @@ export default function Gallery() {
       <DialogTrigger asChild>
         <AspectRatio
           ratio={3 / 2}
-          className="after:content after:shadow-highlight group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg"
+          className='after:content after:shadow-highlight group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg'
         >
           <Image
             src={src}
-            placeholder="blur"
+            placeholder='blur'
             blurDataURL={base64}
-            alt="Unsplash photo"
-            className="rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110"
+            alt='Unsplash photo'
+            className='rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110'
             fill
           />
         </AspectRatio>
       </DialogTrigger>
       <DialogContent
         className={`${
-          height > width == true ? 'max-h-full w-full' : 'sm:max-w-2xl'
+          height > width == true ? 'max-h-full w-full' : 'sm:max-w-[625px]'
         } p-0`}
       >
         <Image
           src={src}
-          placeholder="blur"
+          placeholder='blur'
           blurDataURL={base64}
           height={height}
           width={width}
-          alt="Unsplash photo"
-          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
+          alt='Unsplash photo'
+          sizes='(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw'
         />
       </DialogContent>
     </Dialog>
